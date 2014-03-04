@@ -29,7 +29,7 @@
 			
 			for ( var i2:uint = 0; i2 < this.startMenuButtons.length; i2 ++ ) {
 				
-				this.startMenuButtons[i2].x = 100;
+				this.startMenuButtons[i2].x = 320 - i2 * 5;
 				this.startMenuButtons[i2].y = 80 + i2 * 60;
 				this.addChild ( this.startMenuButtons[i2] );
 				
