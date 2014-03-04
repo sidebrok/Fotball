@@ -8,6 +8,8 @@ package {
 
 		}
 
-		public function add
+		public function addGoal() {
+			
+		}
 	}
 }
