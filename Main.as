@@ -24,6 +24,14 @@ package {
 			stage.addEventListener ( MouseEvent.MOUSE_DOWN, this.startMenuMouseDown );
 			
 			this.startMenuButtons = new Vector.<StartMenuButton> ();
+			this.startMenuButtons.push ( new StartMenuButton ( "Start" ));
+			this.startMenuButtons.push ( new StartMenuButton ( "Hjelp" ));
+			
+			for ( var i2:uint = 0; i2 < this.startMenuButtons.length; i2 ++ ) {
+				
+				this.addChild ( this.startMenuButtons[i2] );
+				
+			}
 			
 		}
 		
