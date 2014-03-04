@@ -16,7 +16,7 @@ import flash.display.DisplayObject;
 		public function getHeight():int {
 			return sprite.height;
 		}
-		
+
 		public function getx(i) {
 
 		}
@@ -30,6 +30,5 @@ import flash.display.DisplayObject;
 		public function sety(i) {
 
 		}
-	}
-	
+	}	
 }
