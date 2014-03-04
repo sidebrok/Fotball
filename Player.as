@@ -1,1 +1,1 @@
-﻿package  {		public class Player {		public function Player() {			// constructor code		}	}	}
+﻿package {		import flash.display.MovieClip;		public class Player {				var mc:MovieClip;				public function Player() {					}	}	}
