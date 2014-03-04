@@ -1,1 +1,1 @@
-﻿package {		import flash.display.MovieClip;		public class Player {				var mc:MovieClip;				public function Player() {					}	}	}
+﻿package {		import flash.display.MovieClip;	import flash.display.DisplayObject;		public class Player {				private var mc:MovieClip;				public function Player() {					}				public function hitTestObject ( obj:DisplayObject ):Boolean {						return mc.hitTestOject ( obj );					}	}	}
