@@ -17,6 +17,10 @@ import flash.display.DisplayObject;
 			return mc.height;
 		}
 
+		public function frame() {
+
+		}
+		
 		public function getx(i) {
 
 		}
