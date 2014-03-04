@@ -23,15 +23,17 @@ package {
 			
 			stage.addEventListener ( MouseEvent.MOUSE_DOWN, this.startMenuMouseDown );
 			
-			startMenuButtons = new Vector.<StartMenuButton> ();
+			this.startMenuButtons = new Vector.<StartMenuButton> ();
 			
 		}
 		
 		public function stopStartMenu ():void {
 			
-			while ( startMenuButtons.length ) {
+			stage.removeEventListener ( MouseEvent.MOUSE_DOWN, this.startMenuMouseDown );
+			
+			while ( this.startMenuButtons.length ) {
 				
-				removeChild ( startMenuButtons.shift() );
+				removeChild ( this.startMenuButtons.shift() );
 				
 			}
 			
@@ -48,15 +50,49 @@ package {
 			player = new Player ();
 			enemies = new Vector.<Enemy>;
 			
+			stage.addEventListener ( Event.ENTER_FRAME, this.gameEnterFrame );
+			stage.addEventListener ( KeyboardEvent.KEY_DOWN, this.gameKeyDown );
+			
+		}
+		
+		public function stopGame ():void {
+			
+			stage.removeEventListener ( Event.ENTER_FRAME, this.gameEnterFrame );
+			stage.removeEventListener ( KeyboardEvent.KEY_DOWN, this.gameKeyDown );
+			
 		}
 		
 		public function gameEnterFrame ( e:Event ):void {
 			
 			
 			
+			
+			
+			//collision detection mellom fiender og spiller
+			
+			//kjører en loop for hver fiende
+			for ( var i1:uint = 0; i1 < this.enemies.length; i1 ++ ) {
+				
+				//sjekker om spilleren kolliderer med hver fiende
+				if ( this.player.mc.hitTestObject ( this.enemies[i1] )) {
+					
+					//dersom det er en kollisjon, kjøres damage-funksjonen og finenden fjernes
+					
+					damage ();
+					
+				}
+				
+			}
+			
 		}
 		
 		public function gameKeyDown ( e:KeyboardEvent ):void {
+			
+			
+			
+		}
+		
+		private function damage ():void {
 			
 			
 			
