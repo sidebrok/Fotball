@@ -1,4 +1,4 @@
-package {
+﻿package {
 	
 	import flash.display.Sprite;
 	import flash.text.TextField;
@@ -10,7 +10,7 @@ package {
 			
 			this.graphics.lineStyle ();
 			this.graphics.beginFill ( 0xff0000 );
-			this.graphics.drawRoundedRect (  );
+			this.graphics.drawRoundRect ( 0, 0, 240, 50, 20, 20 );
 			this.graphics.endFill ();
 			
 			var tf:TextField = new TextField ();

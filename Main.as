@@ -1,4 +1,4 @@
-package {
+ï»¿package {
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -29,6 +29,8 @@ package {
 			
 			for ( var i2:uint = 0; i2 < this.startMenuButtons.length; i2 ++ ) {
 				
+				this.startMenuButtons[i2].x = 100;
+				this.startMenuButtons[i2].y = 80 + i2 * 60;
 				this.addChild ( this.startMenuButtons[i2] );
 				
 			}
@@ -78,13 +80,13 @@ package {
 			
 			//collision detection mellom fiender og spiller
 			
-			//kjører en loop for hver fiende
+			//kjÃ¸rer en loop for hver fiende
 			for ( var i1:uint = 0; i1 < this.enemies.length; i1 ++ ) {
 				
 				//sjekker om spilleren kolliderer med hver fiende
 				if ( this.player.intersects ( this.enemies[i1].getRect() )) {
 					
-					//dersom det er en kollisjon, kjøres damage-funksjonen og finenden fjernes
+					//dersom det er en kollisjon, kjÃ¸res damage-funksjonen og finenden fjernes
 					
 					damage ();
 					
@@ -110,7 +112,7 @@ package {
 			
 			this.removeEventListener ( Event.ADDED_TO_STAGE, this.addedToStage );
 			
-			startStartMeny ();
+			this.startStartMenu ();
 			
 		}
 		
