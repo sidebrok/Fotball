@@ -30,5 +30,9 @@ import flash.display.DisplayObject;
 		public function sety(i) {
 
 		}
+		
+		public function getRect():Rectangle {
+			return mc.getBounds(mc);
+		}
 	}	
 }
