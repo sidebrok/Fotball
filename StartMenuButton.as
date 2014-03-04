@@ -1,10 +1,10 @@
 ﻿package {
 	
-	import flash.display.Sprite;
+	import flash.display.SimpleButton;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 	
-	public class StartMenuButton extends Sprite {
+	public class StartMenuButton extends SimpleButton {
 		
 		public function StartMenuButton ( txt:String ) {
 			
