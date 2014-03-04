@@ -8,6 +8,8 @@ package {
 	
 	public class Main extends Sprite {
 		
+		public var startMenuButtons:Vector.<StartMenuButton>;
+		
 		public var player:Player;
 		public var enemies:Vector.<Enemy>;
 		
@@ -19,7 +21,19 @@ package {
 		
 		public function startStartMenu ():void {
 			
+			stage.addEventListener ( MouseEvent.MOUSE_DOWN, this.startMenuMouseDown );
 			
+			startMenuButtons = new Vector.<StartMenuButton> ();
+			
+		}
+		
+		public function stopStartMenu ():void {
+			
+			while ( startMenuButtons.length ) {
+				
+				removeChild ( startMenuButtons.shift() );
+				
+			}
 			
 		}
 		
@@ -49,10 +63,10 @@ package {
 		}
 		
 		public function addedToStage ( e:Event ):void {
-		
+			
 			this.removeEventListener ( Event.ADDED_TO_STAGE, this.addedToStage );
 			
-			stage.addEventListener ( MouseEvent.MOUSE_DOWN, this.startMenuMouseDown );
+			startStartMeny ();
 			
 		}
 		
