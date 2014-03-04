@@ -23,7 +23,7 @@ package {
 		}
 
 		public function addGoal() {
-
+			
 		}
 
 		public function addBystanders() {
