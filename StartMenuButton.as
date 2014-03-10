@@ -24,10 +24,17 @@
 			
 			for ( var i0:uint = 0; i0 < 3; i0 ++ ) {
 				
+				var col:uint = 0;
+				switch ( i0 ) {
+					case 0: col = 0xeecc88;
+					case 1: col = 0xddbb77;
+					case 2: col = 0xccaa66;
+				}
+				
 				this.sprs.unshift ( new Sprite ());
 				
 				this.sprs[0].graphics.lineStyle ();
-				this.sprs[0].graphics.beginFill ( 0xeecc88 );
+				this.sprs[0].graphics.beginFill ( col );
 				this.sprs[0].graphics.drawRoundRect ( 0, 0, 200, 50, 30, 40 );
 				this.sprs[0].graphics.endFill ();
 				
