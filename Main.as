@@ -95,7 +95,7 @@
 			for ( var i1:uint = 0; i1 < this.enemies.length; i1 ++ ) {
 				
 				//sjekker om spilleren kolliderer med hver fiende
-				if ( this.player.intersects ( this.enemies[i1].getRect() )) {
+				if ( this.player.intersects ( this.enemies[i1].getRecct() )) {
 					
 					//dersom det er en kollisjon, kjøres damage-funksjonen og finenden fjernes
 					

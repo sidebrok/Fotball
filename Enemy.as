@@ -1,10 +1,11 @@
-﻿package  {
-import flash.display.BitmapData;
-import flash.display.MovieClip;
-import flash.geom.Rectangle;
+﻿package {
+	import flash.display.Bitmap;
+	import flash.display.MovieClip;
+	import flash.geom.Rectangle;
 
-	public class Enemy {
-		private var x:Number,y:Number;
+	public class Enemy extends Bitmap {
+		private var xval:Number
+		private var yval:Number;
 		private var dmg:int = 1;
 		private var xspeed:Number;
 		private var mc:MovieClip;
@@ -24,21 +25,21 @@ import flash.geom.Rectangle;
 
 		}
 		
-		public function getx(i) {
-
+		public function getx():Number {
+			return xval;
 		}
-		public function gety(i) {
-
+		public function gety():Number {
+			return yval;
 		}
-		public function setx(i) {
-
+		public function setx(njux:Number):void {
+			xval = njux;
 		}
 
-		public function sety(i) {
-
+		public function sety(njuy:Number):void {
+			yval = njuy;
 		}
 		
-		public function getRect():Rectangle {
+		public function getRecct():Rectangle {
 			return mc.getBounds(mc);
 		}
 	}	
