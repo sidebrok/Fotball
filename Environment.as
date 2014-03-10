@@ -8,7 +8,7 @@ package {
 		public function frame() {
 			switch(randomRange(180)) {
 				case 0:
-				addGoal();
+					addGoal();
 				break;
 
 				case 1:
@@ -23,7 +23,7 @@ package {
 		}
 
 		public function addGoal() {
-			
+
 		}
 
 		public function addBystanders() {
