@@ -1,4 +1,5 @@
 ﻿package  {
+import flash.display.BitmapData;
 import flash.display.MovieClip;
 import flash.geom.Rectangle;
 
