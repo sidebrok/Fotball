@@ -1,9 +1,9 @@
 ﻿package {
-	import flash.display.Bitmap;
+	import flash.display.BitmapData;
 	import flash.display.MovieClip;
 	import flash.geom.Rectangle;
 
-	public class Enemy extends Bitmap {
+	public class Enemy extends BitmapData {
 		private var xval:Number
 		private var yval:Number;
 		private var dmg:int = 1;
