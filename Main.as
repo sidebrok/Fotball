@@ -65,9 +65,9 @@
 		private function startGame ():void {
 			
 			player = new Player ();
+			player.addChild ( stage );
 			enemies = new Vector.<Enemy>;
-			environment = new Environment ();
-			stage.addChild ( environment );
+			environment = new Environment (stage);
 			
 			stage.addEventListener ( Event.ENTER_FRAME, this.gameEnterFrame );
 			stage.addEventListener ( KeyboardEvent.KEY_DOWN, this.gameKeyDown );
