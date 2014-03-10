@@ -1,5 +1,9 @@
 package {
 	public class Environment {
+		
+		var goal:MovieClip = new Goal();
+		var bgplayer:MovieClip = new EnemyPlayer();
+		var bystanders:MovieClip = new Bystander1();
 
 		public function Environment {
 

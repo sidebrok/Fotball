@@ -3,6 +3,7 @@ package {
 	import flash.media.Sound;
 	
 	public class SoundManager {
+		
 		private static var dew,redbull,player;
 		private static var sound = new Array();
 		private static var music = new Array();
