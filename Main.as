@@ -13,6 +13,8 @@
 		private var player:Player;
 		private var enemies:Vector.<Enemy>;
 		
+		private var environment:Environment;
+		
 		public function Main () {
 			
 			this.addEventListener ( Event.ADDED_TO_STAGE, this.addedToStage );
@@ -51,7 +53,12 @@
 		
 		private function startMenuMouseDown ( e:MouseEvent ):void {
 			
-			
+			switch ( e.target ) {
+				
+				case startMenuButtons[0]: stopStartMenu(); startGame(); break;
+				//case startMenuButtons[1]:  break;
+				
+			}
 			
 		}
 		
@@ -59,6 +66,8 @@
 			
 			player = new Player ();
 			enemies = new Vector.<Enemy>;
+			environment = new Environment ();
+			stage.addChild ( environment );
 			
 			stage.addEventListener ( Event.ENTER_FRAME, this.gameEnterFrame );
 			stage.addEventListener ( KeyboardEvent.KEY_DOWN, this.gameKeyDown );
@@ -66,6 +75,8 @@
 		}
 		
 		private function stopGame ():void {
+			
+			stage.removeChild ( environment );
 			
 			stage.removeEventListener ( Event.ENTER_FRAME, this.gameEnterFrame );
 			stage.removeEventListener ( KeyboardEvent.KEY_DOWN, this.gameKeyDown );
