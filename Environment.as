@@ -1,5 +1,7 @@
 package {
 	import flash.display.DisplayObjectContainer;
+	import flash.display.MovieClip;
+
 	public class Environment {
 		
 		var doc:DisplayObjectContainer;
@@ -15,7 +17,7 @@ package {
 
 		public function frame() {
 
-			for ( var i0:uint = 0; i < goals.length; i++ ) {
+			for ( var i0:uint = 0; i0 < goals.length; i0++ ) {
 
 				goals[i0].x -= 5;
 				if (goals[i0].x < 0){
@@ -26,23 +28,24 @@ package {
 				}
 			}
 
-			for ( var i0:uint = 0; i < bystanders.length; i++ ) {
+			for ( var i1:uint = 0; i1 < bystanders.length; i1++ ) {
 
-				bystanders[i0].x -= 5;
-				if (bystanders[i0].x < 0){
+				bystanders[i1].x -= 5;
+				if (bystanders[i1].x < 0){
 
-					doc.removeChild (bystanders[i0]);
-					bystanders.splice(i0,1);
+					doc.removeChild (bystanders[i1]);
+					bystanders.splice(i1,1);
 
 				}
 			}
-			for ( var i0:uint = 0; i < bgplayers.length; i++ ) {
 
-				bgplayers[i0].x -= 5;
-				if (bgplayers[i0].x < 0){
+			for ( var i2:uint = 0; i2 < bgplayers.length; i2++ ) {
 
-					doc.removeChild (bgplayers[i0]);
-					bgplayers.splice(i0,1);
+				bgplayers[i2].x -= 5;
+				if (bgplayers[i2].x < 0){
+
+					doc.removeChild (bgplayers[i2]);
+					bgplayers.splice(i2,1);
 
 				}
 			}
@@ -80,11 +83,11 @@ package {
 		}
 
 		public function addBackgroundEnemies() {
-			var ePlayer:bgPlayers = new EnemyPlayer();
+			var ePlayer:EnemyPlayer = new EnemyPlayer();
 			ePlayer.x = 1200;
 			ePlayer.y = 300;
-			doc.addChild(t);
-			bgPlayers.push(ePlayer);
+			doc.addChild(ePlayer);
+			bgplayers.push(ePlayer);
 		}
 
 		public function randomRange(max:Number, min:Number = 0):Number
