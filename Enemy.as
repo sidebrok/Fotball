@@ -6,37 +6,32 @@
 	public class Enemy extends BitmapData {
 		private var xval:Number
 		private var yval:Number;
+
 		private var dmg:int = 1;
 		private var xspeed:Number;
+
 		private var mc:MovieClip;
 
 		public function Enemy(t) {
-			mc = new Redbull ();
-			//mc = t ? new Redbull() : new Dewz();//change to real things
+			switch(t) {
+				case 0:
+				mc = new Redbull ();
+				//mc = t ? new Redbull() : new Dewz();//change to real things
+				break;
+				case 1:
+
+				break;
+				default:
+					mc = new Redbull ();
+				break;
+			}
 		}
 
 
 		//GETTERS AND SETTERS
-		public function getHeight():int {
-			return mc.height;
-		}
 
 		public function frame() {
-
-		}
-		
-		public function getx():Number {
-			return xval;
-		}
-		public function gety():Number {
-			return yval;
-		}
-		public function setx(njux:Number):void {
-			xval = njux;
-		}
-
-		public function sety(njuy:Number):void {
-			yval = njuy;
+			mc.x -= xspeed;
 		}
 		
 		public function getRecct():Rectangle {
